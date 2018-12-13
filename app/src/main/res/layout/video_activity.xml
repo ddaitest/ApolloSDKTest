@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button android:id="@+id/scale_switch_button"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="缩放"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="长按菜单"
+            android:id="@+id/tvmenu" />
+
+        <Button android:id="@+id/volup_btn"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:text="Vol+"
+            android:background="@android:color/transparent"/>
+
+        <Button android:id="@+id/voldown_btn"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:text="Vol-"
+            android:background="@android:color/transparent"/>
+
+        <Button android:id="@+id/mute_btn"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:text="mute"
+            android:background="@android:color/transparent"/>
+
+        <Button android:id="@+id/unmute_btn"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:text="unmute"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right">
+        <!--Switch
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="字幕"
+            android:id="@+id/switch_subtitle"
+            android:checked="false" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="停止字幕"
+            android:id="@+id/switch_subtitle_pause"
+            android:checked="false" /-->
+
+        <CheckBox
+            android:id="@+id/cb_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="字幕"/>
+
+        <CheckBox
+            android:id="@+id/cb_subtitle_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止字幕"/>
+
+    </LinearLayout>
+
+    <FrameLayout android:id="@+id/play_frame"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content">
+
+        <com.UCMobile.Apollo.AutoVideoView
+            android:id="@+id/playVideoView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/fps_text"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:text=""
+            android:background="@android:color/transparent"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>
